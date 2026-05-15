@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arduino Experiments</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f5f7fa;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #00979D, #005f73);
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+    }
+
+    nav {
+      background-color: #003845;
+      padding: 15px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    .hero {
+      height: 350px;
+      background: url('YOUR_IMAGE_HERE.jpg') center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 20px;
+    }
+
+    .hero-content {
+      background: rgba(0,0,0,0.6);
+      padding: 25px;
+      border-radius: 15px;
+    }
+
+    .hero h2 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+    .section {
+      padding: 50px 10%;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2rem;
+      color: #005f73;
+    }
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      justify-content: center;
+    }
+
+    .card {
+      background: white;
+      width: 300px;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-content h3 {
+      margin-bottom: 10px;
+      color: #00979D;
+    }
+
+    .steps {
+      background-color: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-top: 30px;
+    }
+
+    .steps ol {
+      padding-left: 20px;
+      line-height: 2;
+    }
+
+    footer {
+      background-color: #003845;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    button {
+      background-color: #00979D;
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 15px;
+    }
+
+    button:hover {
+      background-color: #00757a;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .hero h2 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Arduino Experiments</h1>
+    <p>Learn • Build • Innovate</p>
+  </header>
+
+  <!-- NAVIGATION BAR -->
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#experiments">Experiments</a>
+    <a href="#steps">Connection and Usage</a>
+    <a href="#contact">Contact</a>
+    <a href="#results">Results</a>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h2>Explore Amazing Arduino Projects</h2>
+
+      <!-- WRITE A SHORT INTRODUCTION HERE -->
+      <p>
+Hi welcome to the Website! <br> We are glad you stopped by but like anyways we know why you stopped by... </br><p style="text-align: center; font-size: 18px; line-height: 1.8; padding: 20px;">
+  Welcome to the <b>Arduino Experiments Hub!</b> This website is created to 
+  showcase exciting Arduino projects, experiments, and innovations developed 
+  by students and technology enthusiasts. Here, you can explore different 
+  electronics projects, learn how components work, and discover creative ideas 
+  using Arduino. Whether you are a beginner or an experienced maker, this 
+  platform is designed to inspire learning, experimentation, and innovation 
+  in the world of electronics and programming.
+</p>
+      </p>
+
+      <button onclick="showMessage()">Start Exploring</button>
+    </div>
+  </section>
+
+  <!-- EXPERIMENT CARDS -->
+  <section class="section" id="experiments">
+    <h2 class="section-title">Featured Experiments</h2>
+
+    <div class="card-container">
+
+      <!-- CARD 1 -->
+      <div class="card">
+	
+        <div class="card-content">
+          <h3> Blink Built-in LED with Different Patterns
+</h3>
+
+          <!-- WRITE DESCRIPTION HERE -->
+                    <p>
+  <b>Concept:</b> Timing and logic
+</p>
+         
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="card">
+       
+
+        <div class="card-content">
+          <h3> Serial Monitor Hello Program</h3>
+
+          <!-- WRITE DESCRIPTION HERE -->
+          <p>
+  <b>Concept:</b>Communication
+
+          </p>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="card">
+                <div class="card-content">
+          <h3> User Input via Serial Monitor
+</h3>
+
+          <!-- WRITE DESCRIPTION HERE -->
+          <p>
+           <b>Concept:</b>Input handling
+          </p>
+        </div>
+      </div>
+
+    </div>
+<center>
+
+  <a href="https://docs.google.com/document/d/1DCivI9JnrNE-tPZw0UwHoRGTpCNmiobvbqZmozSBN6g/edit?pli=1&tab=t.0" target="_blank">
+    <button>
+      Click This For More
+    </button>
+  </a>
+
+</center>
+  </section>
+
+  <!-- PROCEDURE SECTION -->
+  <section class="section" id="steps">
+    <h2 class="section-title">How to connect and use your Arduino</h2>
+
+    <div class="steps">
+    
+        <section>
+<center>
+
+
+    <font size="5">
+
+      <ol style="display: inline-block; text-align: left;">
+
+        <li>
+          <b>Connect the Arduino Board</b><br>
+          Use a USB cable to connect the Arduino board to your computer or laptop.
+        </li>
+
+        <br>
+
+        <li>
+          <b>Open Arduino IDE</b><br>
+          Download and open the Arduino IDE software on your computer.
+        </li>
+
+        <br>
+
+        <li>
+          <b>Select the Board</b><br>
+          Go to <code>Tools → Board</code> and select your Arduino board 
+          (Example: Arduino Uno).
+        </li>
+
+        <br>
+
+        <li>
+          <b>Select the Port</b><br>
+          Go to <code>Tools → Port</code> and choose the correct COM port.
+        </li>
+
+        <br>
+
+        <li>
+          <b>Write or Paste the Code</b><br>
+          Type your Arduino code or paste an experiment program into the IDE.
+        </li>
+
+        <br>
+
+        <li>
+          <b>Upload the Code</b><br>
+          Click the Upload button to send the code to the Arduino board.
+        </li>
+
+        <br>
+
+        <li>
+          <b>Observe the Output</b><br>
+          Watch the LEDs, sensors, or connected components perform the experiment.
+        </li>
+
+      </ol>
+
+    </font>
+
+  </center>
+
+  </section>
+      
+    </div>
+  </section>
+
+<section class="section" id="results">
+    <h2 class="section-title">Results</h2>
+
+    <!-- WRITE CONTACT DETAILS HERE -->
+    <p style="text-align:center;">
+ </p>
+</section>
+
+
+  <!-- CONTACT SECTION -->
+  <section class="section" id="contact">
+    <h2 class="section-title">Contact</h2>
+
+    <!-- WRITE CONTACT DETAILS HERE -->
+    <p style="text-align:center;">
+      <center>
+
+  <font size="5">
+
+    <p>
+      <b>Janya</b> - 9th Grade (Intern)
+    </p>
+
+    <p>
+      <b>Manonmani</b> - 9th Grade (Intern)
+    </p>
+
+    <p>
+      <b>Gajendranath Chowdary</b> - Mentor<br>
+      Indian Institute of Technology Hyderabad,<br>
+      Kandi, Hyderabad, INDIA - 502285<br>
+      gajendranath@ee.iith.ac.in
+    </p>
+
+  </font>
+
+</center>
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Arduino Experiments Hub | Created by Students</p>
+  </footer>
+
+  <script>
+    function showMessage() {
+      alert("Welcome to the Arduino Experiments Website!");
+    }
+  </script>
+
+</body>
+</html>
